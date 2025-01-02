@@ -285,6 +285,76 @@ Citizen.CreateThread(function()
     end
 end)
 
+-- Tab Customization Thread
+Citizen.CreateThread(function()
+    -- Wait for resource to fully start and themes to load
+    Citizen.Wait(0)
+
+    -- Load themes if not already loaded
+    if not Themes then
+        local themesContent = LoadResourceFile(GetCurrentResourceName(), 'themes.lua')
+        if themesContent then
+            local loadThemes, errorMsg = load(themesContent, 'themes.lua', 't')
+            if loadThemes then
+                local success, loadedThemes = pcall(loadThemes)
+                if success then
+                    Themes = loadedThemes
+                else
+                    print('^1ERROR: Failed to execute themes.lua: ' .. tostring(loadedThemes) .. '^7')
+                    return
+                end
+            else
+                print('^1ERROR: Failed to compile themes.lua: ' .. tostring(errorMsg) .. '^7')
+                return
+            end
+        else
+            print('^1ERROR: Could not load themes.lua file^7')
+            return
+        end
+    end
+
+    -- Helper function to add text entries
+    local function AddTextEntry(key, value)
+        Citizen.InvokeNative(GetHashKey("ADD_TEXT_ENTRY"), key, value)
+    end
+
+    -- Get the appropriate color for a tab
+    local function GetTabColor(tabName)
+        if not Config.Tabs.enabled then return '' end
+        if not Config.Tabs.useThemeColors then return Config.Tabs.customColor end
+        
+        local selectedTheme = Themes.Colors[Config.Theme.colorScheme] or Themes.Colors.modern_dark
+        return selectedTheme.tabs[tabName] or '~w~'
+    end
+
+    while true do
+        if Config.Tabs.enabled then
+            -- Map tab
+            AddTextEntry('PM_SCR_MAP', GetTabColor('map') .. Config.Tabs.names.map)
+            
+            -- Status tab
+            AddTextEntry('PM_SCR_STA', GetTabColor('status') .. Config.Tabs.names.status)
+            
+            -- Game tab
+            AddTextEntry('PM_SCR_GAM', GetTabColor('game') .. Config.Tabs.names.game)
+            
+            -- Info tab
+            AddTextEntry('PM_SCR_INF', GetTabColor('info') .. Config.Tabs.names.info)
+            
+            -- Settings tab
+            AddTextEntry('PM_SCR_SET', GetTabColor('settings') .. Config.Tabs.names.settings)
+            
+            -- R* Editor tab
+            AddTextEntry('PM_SCR_RPL', GetTabColor('editor') .. Config.Tabs.names.editor)
+            
+            -- Gallery tab
+            AddTextEntry('PM_SCR_GAL', GetTabColor('gallery') .. Config.Tabs.names.gallery)
+        end
+        
+        Citizen.Wait(1000) -- Update every second
+    end
+end)
+
 -- Update Stats Thread
 Citizen.CreateThread(function()
     while true do

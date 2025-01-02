@@ -49,7 +49,7 @@ Config.Theme = {
     -- 'professional' - Clean and professional look
     -- 'minimalist'   - Clean and simple design
     -- 'warm'         - Warm and inviting colors
-    colorScheme = 'warm',
+    colorScheme = 'cyberpunk',
 
     -- Layout selection
     -- Options:
@@ -58,12 +58,28 @@ Config.Theme = {
     -- 'minimal'   - Bare essentials only
     -- 'centered'  - Balanced design
     -- 'extended'  - Full information spread
-    layout = 'extended'
+    layout = 'modern'
 }
 
 --[[ MENU DISPLAY SETTINGS ]]
-Config.Title = 'Nexure Store'        -- Main title in the pause menu
-Config.Subtitle = 'Welcome!'         -- Subtitle text
+Config.Title = '~g~Nexure~w~ ~p~Store~w~'        -- Main title in the pause menu. You can easily color with ~ values.
+Config.Subtitle = '~w~Welcome!'         -- Subtitle text
+
+--[[ TAB CUSTOMIZATION ]]
+Config.Tabs = {
+    enabled = true,              -- Enable custom tab names and colors
+    useThemeColors = true,       -- Use theme colors for tabs (if false, uses custom colors below)
+    customColor = '~w~',         -- Default color for all tabs if useThemeColors is false
+    names = {
+        map = 'Map',             -- Custom name for Map tab
+        status = 'Status',       -- Custom name for Status tab
+        game = 'Game',           -- Custom name for Game tab
+        info = 'Info',           -- Custom name for Info tab
+        settings = 'Settings',   -- Custom name for Settings tab
+        editor = 'Editor',       -- Custom name for R* Editor tab
+        gallery = 'Gallery'      -- Custom name for Gallery tab
+    }
+}
 
 --[[ COMPONENT CONFIGURATION ]]
 Config.Components = {
