@@ -51,10 +51,7 @@ A modern and highly customizable pause menu replacement for FiveM servers with s
   - Customizable update intervals
 
 ## 📋 Requirements
-
-- FiveM Server
 - ESX or QBCore Framework
-- oxmysql
 
 ## 💻 Installation
 
