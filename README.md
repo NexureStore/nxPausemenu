@@ -21,6 +21,19 @@ A modern and highly customizable pause menu replacement for FiveM servers with s
   - Server information (Players, Ping)
   - Date and Time
 
+- **Tab Customization**
+  - Customizable tab names
+  - Theme-based color schemes for tabs
+  - Individual color control for each tab
+  - Support for all pause menu tabs:
+    - Map
+    - Status
+    - Game
+    - Info
+    - Settings
+    - Gallery
+    - R* Editor
+
 - **Customization Options**
   - 5 Pre-built color themes
     - Modern Dark
@@ -83,6 +96,22 @@ Config.Theme = {
 -- Menu Display Settings
 Config.Title = 'Nexure Store'        -- Main title displayed in the pause menu
 Config.Subtitle = 'Welcome!'         -- Subtitle displayed below the main title
+
+-- Tab Customization
+Config.Tabs = {
+    enabled = true,              -- Enable custom tab names and colors
+    useThemeColors = true,       -- Use theme colors for tabs (if false, uses custom colors)
+    customColor = '~w~',         -- Default color for all tabs if useThemeColors is false
+    names = {
+        map = 'Map',             -- Custom name for Map tab
+        status = 'Status',       -- Custom name for Status tab
+        game = 'Game',           -- Custom name for Game tab
+        info = 'Info',           -- Custom name for Info tab
+        settings = 'Settings',   -- Custom name for Settings tab
+        editor = 'Editor',       -- Custom name for R* Editor tab
+        gallery = 'Gallery'      -- Custom name for Gallery tab
+    }
+}
 ```
 
 ### Component Configuration
@@ -166,7 +195,7 @@ Config.UpdateIntervals = {
 ```
 
 ### Color Customization
-Each theme comes with predefined colors, but you can customize them in `themes.lua`:
+Each theme comes with predefined colors for both components and tabs. You can customize them in `themes.lua`:
 
 ```lua
 -- Color Codes Available:
@@ -179,6 +208,20 @@ Each theme comes with predefined colors, but you can customize them in `themes.l
 -- ~c~ = Grey
 -- ~w~ = White
 -- ~s~ = Default
+
+-- Example theme structure with tab colors:
+modern_dark = {
+    tabs = {
+        map = '~b~',      -- Blue
+        status = '~b~',   -- Blue
+        game = '~b~',     -- Blue
+        info = '~b~',     -- Blue
+        settings = '~b~',  -- Blue
+        editor = '~c~',   -- Grey
+        gallery = '~b~'   -- Blue
+    },
+    -- ... other theme components
+}
 ```
 
 ### Layout Customization
