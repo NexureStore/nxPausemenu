@@ -5,35 +5,44 @@ Themes.Colors = {
     -- Modern Dark theme (sleek dark UI with accent colors)
     modern_dark = {
         player = {
-            name = '~w~',     -- White
+            name = '~b~',     -- Blue
             id = '~c~',       -- Grey
             separator = '~s~'  -- Default
         },
         money = {
-            cash = '~g~',     -- Green
+            cash = '~b~',     -- Blue
             bank = '~b~',     -- Blue
             currency = '~w~',  -- White
             separator = '~s~', -- Default
             text = '~w~'      -- White
         },
+        tabs = {
+            map = '~b~',      -- Blue
+            status = '~b~',   -- Blue
+            game = '~b~',     -- Blue
+            info = '~b~',     -- Blue
+            settings = '~b~',  -- Blue
+            editor = '~c~',   -- Grey
+            gallery = '~b~'   -- Blue
+        },
         job = {
-            label = '~w~',     -- White
+            label = '~b~',     -- Blue
             grade = '~c~',     -- Grey
             separator = '~s~',  -- Default
-            unemployed = '~r~', -- Red
-            employed = '~g~'    -- Green
+            unemployed = '~c~', -- Grey
+            employed = '~b~'    -- Blue
         },
         datetime = {
-            time = '~w~',     -- White
+            time = '~b~',     -- Blue
             date = '~c~',     -- Grey
             separator = '~s~'  -- Default
         },
         server = {
-            players = '~w~',   -- White
+            players = '~b~',   -- Blue
             separator = '~s~', -- Default
             ping = {
-                good = '~g~',  -- Green
-                medium = '~y~', -- Yellow
+                good = '~b~',   -- Blue
+                medium = '~c~', -- Grey
                 bad = '~r~'    -- Red
             }
         }
@@ -44,33 +53,42 @@ Themes.Colors = {
         player = {
             name = '~p~',     -- Purple
             id = '~b~',       -- Blue
-            separator = '~y~'  -- Yellow
+            separator = '~p~'  -- Purple
         },
         money = {
-            cash = '~g~',     -- Green
-            bank = '~b~',     -- Blue
-            currency = '~y~',  -- Yellow
-            separator = '~w~', -- White
-            text = '~p~'      -- Purple
+            cash = '~p~',     -- Purple
+            bank = '~p~',     -- Purple
+            currency = '~b~',  -- Blue
+            separator = '~p~', -- Purple
+            text = '~b~'      -- Blue
+        },
+        tabs = {
+            map = '~p~',      -- Purple
+            status = '~b~',   -- Blue
+            game = '~p~',     -- Purple
+            info = '~b~',     -- Blue
+            settings = '~p~',  -- Purple
+            editor = '~b~',   -- Blue
+            gallery = '~p~'   -- Purple
         },
         job = {
-            label = '~b~',     -- Blue
-            grade = '~p~',     -- Purple
-            separator = '~y~',  -- Yellow
+            label = '~p~',     -- Purple
+            grade = '~b~',     -- Blue
+            separator = '~p~',  -- Purple
             unemployed = '~r~', -- Red
-            employed = '~g~'    -- Green
+            employed = '~p~'    -- Purple
         },
         datetime = {
-            time = '~y~',     -- Yellow
-            date = '~p~',     -- Purple
-            separator = '~b~'  -- Blue
+            time = '~p~',     -- Purple
+            date = '~b~',     -- Blue
+            separator = '~p~'  -- Purple
         },
         server = {
             players = '~p~',   -- Purple
-            separator = '~y~', -- Yellow
+            separator = '~p~', -- Purple
             ping = {
-                good = '~g~',  -- Green
-                medium = '~y~', -- Yellow
+                good = '~p~',   -- Purple
+                medium = '~b~', -- Blue
                 bad = '~r~'    -- Red
             }
         }
@@ -84,18 +102,27 @@ Themes.Colors = {
             separator = '~c~'  -- Grey
         },
         money = {
-            cash = '~g~',     -- Green
-            bank = '~b~',     -- Blue
+            cash = '~s~',     -- Default
+            bank = '~s~',     -- Default
             currency = '~s~',  -- Default
             separator = '~c~', -- Grey
             text = '~s~'      -- Default
+        },
+        tabs = {
+            map = '~s~',      -- Default
+            status = '~s~',   -- Default
+            game = '~s~',     -- Default
+            info = '~s~',     -- Default
+            settings = '~s~',  -- Default
+            editor = '~c~',   -- Grey
+            gallery = '~s~'   -- Default
         },
         job = {
             label = '~s~',     -- Default
             grade = '~c~',     -- Grey
             separator = '~c~',  -- Grey
-            unemployed = '~r~', -- Red
-            employed = '~g~'    -- Green
+            unemployed = '~c~', -- Grey
+            employed = '~s~'    -- Default
         },
         datetime = {
             time = '~s~',     -- Default
@@ -106,8 +133,8 @@ Themes.Colors = {
             players = '~s~',   -- Default
             separator = '~c~', -- Grey
             ping = {
-                good = '~g~',  -- Green
-                medium = '~y~', -- Yellow
+                good = '~s~',   -- Default
+                medium = '~c~', -- Grey
                 bad = '~r~'    -- Red
             }
         }
@@ -123,9 +150,18 @@ Themes.Colors = {
         money = {
             cash = '~w~',     -- White
             bank = '~w~',     -- White
-            currency = '~c~',  -- Grey
+            currency = '~w~',  -- White
             separator = '~c~', -- Grey
-            text = '~c~'      -- Grey
+            text = '~w~'      -- White
+        },
+        tabs = {
+            map = '~w~',      -- White
+            status = '~w~',   -- White
+            game = '~w~',     -- White
+            info = '~w~',     -- White
+            settings = '~w~',  -- White
+            editor = '~c~',   -- Grey
+            gallery = '~w~'   -- White
         },
         job = {
             label = '~w~',     -- White
@@ -143,9 +179,9 @@ Themes.Colors = {
             players = '~w~',   -- White
             separator = '~c~', -- Grey
             ping = {
-                good = '~w~',  -- White
+                good = '~w~',   -- White
                 medium = '~c~', -- Grey
-                bad = '~r~'    -- Red
+                bad = '~c~'    -- Grey
             }
         }
     },
@@ -155,32 +191,41 @@ Themes.Colors = {
         player = {
             name = '~o~',     -- Orange
             id = '~y~',       -- Yellow
-            separator = '~w~'  -- White
+            separator = '~o~'  -- Orange
         },
         money = {
-            cash = '~g~',     -- Green
-            bank = '~b~',     -- Blue
+            cash = '~o~',     -- Orange
+            bank = '~o~',     -- Orange
             currency = '~o~',  -- Orange
-            separator = '~w~', -- White
+            separator = '~o~', -- Orange
             text = '~y~'      -- Yellow
+        },
+        tabs = {
+            map = '~o~',      -- Orange
+            status = '~y~',   -- Yellow
+            game = '~o~',     -- Orange
+            info = '~y~',     -- Yellow
+            settings = '~o~',  -- Orange
+            editor = '~y~',   -- Yellow
+            gallery = '~o~'   -- Orange
         },
         job = {
             label = '~o~',     -- Orange
             grade = '~y~',     -- Yellow
-            separator = '~w~',  -- White
+            separator = '~o~',  -- Orange
             unemployed = '~r~', -- Red
-            employed = '~g~'    -- Green
+            employed = '~o~'    -- Orange
         },
         datetime = {
             time = '~o~',     -- Orange
             date = '~y~',     -- Yellow
-            separator = '~w~'  -- White
+            separator = '~o~'  -- Orange
         },
         server = {
             players = '~o~',   -- Orange
-            separator = '~w~', -- White
+            separator = '~o~', -- Orange
             ping = {
-                good = '~g~',  -- Green
+                good = '~o~',   -- Orange
                 medium = '~y~', -- Yellow
                 bad = '~r~'    -- Red
             }
@@ -190,7 +235,7 @@ Themes.Colors = {
 
 -- Layout Presets
 Themes.Layouts = {
-    -- Modern layout (clean and spacious)
+    -- Modern layout (clean and spacious with full information)
     modern = {
         alignment = 'right',
         spacing = 2.0,
@@ -201,17 +246,17 @@ Themes.Layouts = {
             left = 30
         },
         order = {
+            'datetime',
             'player',
             'money',
             'job',
-            'datetime',
             'server'
         }
     },
 
-    -- Compact layout (minimal space usage)
+    -- Compact layout (condensed with essential info)
     compact = {
-        alignment = 'right',
+        alignment = 'left',
         spacing = 0.5,
         padding = {
             top = 2,
@@ -222,19 +267,19 @@ Themes.Layouts = {
         order = {
             'player',
             'money',
-            'job'
+            'server'
         }
     },
 
-    -- Minimal layout (bare essentials)
+    -- Minimal layout (bare essentials only)
     minimal = {
         alignment = 'right',
-        spacing = 0.8,
+        spacing = 1.0,
         padding = {
-            top = 5,
-            right = 8,
-            bottom = 5,
-            left = 8
+            top = 10,
+            right = 15,
+            bottom = 10,
+            left = 15
         },
         order = {
             'player',
@@ -242,7 +287,7 @@ Themes.Layouts = {
         }
     },
 
-    -- Centered layout (balanced design)
+    -- Centered layout (balanced design with key info)
     centered = {
         alignment = 'center',
         spacing = 2.5,
@@ -255,11 +300,12 @@ Themes.Layouts = {
         order = {
             'datetime',
             'player',
-            'money'
+            'money',
+            'server'
         }
     },
 
-    -- Extended layout (full information spread)
+    -- Extended layout (comprehensive with all components)
     extended = {
         alignment = 'left',
         spacing = 1.8,
@@ -279,4 +325,5 @@ Themes.Layouts = {
     }
 }
 
+_G.Themes = Themes  -- Make Themes globally accessible
 return Themes 
