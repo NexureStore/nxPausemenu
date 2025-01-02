@@ -1,0 +1,36 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE/Editor Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Lua Files
+*.luac
+luac.out
+
+# FiveM Specific
+cache/
+crashes/
+logs/
+*.log
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build/Temporary Files
+build/
+temp/
+*.tmp
+
+# Environment Files
+.env
+.env.local
+
+# Debug Files
+debug.log
